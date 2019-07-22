@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://shitao.site/schema/methodlog"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:tool="http://www.springframework.org/schema/tool"
+            xmlns:beans="http://www.springframework.org/schema/beans"
+            targetNamespace="http://shitao.site/schema/methodlog"
+>
+
+    <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+    <xsd:import namespace="http://www.springframework.org/schema/tool"/>
+
+    <xsd:annotation>
+        <xsd:documentation><![CDATA[ Namespace support for the method log framework. ]]></xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:element name="main">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:attribute name="scan" type="xsd:string" use="required"/>
+                    <xsd:attribute name="is-import-football" type="xsd:boolean" default="true"/>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+
+</xsd:schema>

@@ -1,1 +1,1 @@
-# mvp
+最小可行产品minimum viable product，用来试用各种框架，中间件，跑通各种算法等等
