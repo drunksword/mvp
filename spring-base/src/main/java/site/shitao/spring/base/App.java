@@ -15,6 +15,8 @@ public class App {
 
         TestBean bean = (TestBean) applicationContext.getBean("shitao");
 
+        ((ClassPathXmlApplicationContext) applicationContext).destroy();
+
         System.out.println(String.format("\n>>>>>>\n\n%s\n\n>>>>>>>>\n", JSON.toJSONString(bean)));
     }
 }

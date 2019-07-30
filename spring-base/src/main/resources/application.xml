@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
-        ">
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean class="site.shitao.spring.base.TestBean" name="shitao">
         <property name="name" value="shi"></property>
         <property name="job" value="engineer"></property>
     </bean>
+
+
+    <bean id="beanLifecycle" class="site.shitao.spring.base.lifecycle.BeanLifecycle" init-method="init" destroy-method="customerDestroy"></bean>
+    <bean id="beanPostProcessorTest" class="site.shitao.spring.base.lifecycle.BeanPostProcessorTest"></bean>
 </beans>
