@@ -12,6 +12,7 @@
         <module>zk</module>
         <module>spring-custom-xml-schema</module>
         <module>spring-base</module>
+        <module>redis</module>
     </modules>
 
     <dependencies>
