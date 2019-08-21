@@ -17,6 +17,8 @@ public class App {
 
         ((ClassPathXmlApplicationContext) applicationContext).destroy();
 
+        ((ClassPathXmlApplicationContext) applicationContext).registerShutdownHook();
+
         System.out.println(String.format("\n>>>>>>\n\n%s\n\n>>>>>>>>\n", JSON.toJSONString(bean)));
     }
 }
