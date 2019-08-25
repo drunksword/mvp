@@ -25,7 +25,7 @@ public class TestLock {
 
         Executor exe = Executors.newFixedThreadPool(10);
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 10; i++) {
             final int _i = i;
             exe.execute(() -> {
                 while(true){
