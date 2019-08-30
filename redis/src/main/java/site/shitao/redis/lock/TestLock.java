@@ -8,14 +8,13 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 /**
- * Author: tao.shi@ximalaya.com
+ * Author: tao.shi@xxx.com
  * Created: 8/21
  */
 public class TestLock {
 
     @Before
     public void before(){
-
     }
 
     @Test

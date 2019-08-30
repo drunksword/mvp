@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Author: tao.shi@ximalaya.com
+ * Author: tao.shi@xxx.com
  * Created: 7/20
  */
 public class Application {

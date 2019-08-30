@@ -13,7 +13,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 /**
- * Author: tao.shi@ximalaya.com
+ * Author: tao.shi@xxx.com
  * Created: 11/18
  */
 @Slf4j

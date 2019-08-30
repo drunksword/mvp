@@ -9,7 +9,7 @@ import redis.clients.jedis.JedisPoolConfig;
 import java.util.Arrays;
 
 /**
- * Author: tao.shi@ximalaya.com
+ * Author: tao.shi@xxx.com
  * Created: 8/20
  */
 public class DistributedLock {
