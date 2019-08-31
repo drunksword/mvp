@@ -1,8 +1,6 @@
 package site.shitao.redis.lock;
 
-import org.junit.Test;
 import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisCommands;
 
 import java.util.Arrays;
 
@@ -32,7 +30,7 @@ public class DistributedLock {
 
     public boolean release(String key){
         String threadId = String.valueOf(Thread.currentThread().getId());
-        Long val = (long) jedis.eval(lua, Arrays.asList(key), Arrays.asList(threadId));
+        Long val = (Long) jedis.eval(lua, Arrays.asList(key), Arrays.asList(threadId));
         return val > 0;
     }
 

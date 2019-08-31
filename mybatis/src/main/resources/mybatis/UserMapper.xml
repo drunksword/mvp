@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="site.shitao.mapper.UserMapper">
+    <insert id="insert" parameterType="User">
+        insert into user(name) values(#{name});
+    </insert>
+
+    <select id="select" parameterType="java.lang.Integer" resultType="User">
+        select * from user where id = #{id}
+    </select>
+
+</mapper>

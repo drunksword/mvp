@@ -13,6 +13,7 @@
         <module>spring-custom-xml-schema</module>
         <module>spring-base</module>
         <module>redis</module>
+        <module>mybatis</module>
     </modules>
 
     <dependencies>
