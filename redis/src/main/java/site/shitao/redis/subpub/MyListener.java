@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import redis.clients.jedis.JedisPubSub;
 
 /**
- * Author: tao.shi@ximalaya.com
+ * Author: tao.shi@xxx.com
  * Created: 8/14
  */
 @Slf4j

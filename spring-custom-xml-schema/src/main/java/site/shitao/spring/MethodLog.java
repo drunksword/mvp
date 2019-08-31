@@ -5,7 +5,7 @@ import lombok.Data;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
- * Author: tao.shi@ximalaya.com
+ * Author: tao.shi@xxx.com
  * Created: 7/20
  */
 @Data @AllArgsConstructor

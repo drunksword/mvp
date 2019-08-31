@@ -5,7 +5,7 @@ import org.springframework.beans.factory.xml.AbstractSingleBeanDefinitionParser;
 import org.w3c.dom.Element;
 
 /**
- * Author: tao.shi@ximalaya.com
+ * Author: tao.shi@xxx.com
  * Created: 7/20
  */
 public class MethodLogBeanDefinitionParser extends AbstractSingleBeanDefinitionParser {

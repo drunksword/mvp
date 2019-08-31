@@ -3,7 +3,7 @@ package site.shitao.spring.base;
 import lombok.Data;
 
 /**
- * Author: tao.shi@ximalaya.com
+ * Author: tao.shi@xxx.com
  * Created: 7/25
  */
 @Data
