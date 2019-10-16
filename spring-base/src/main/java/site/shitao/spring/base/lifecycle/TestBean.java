@@ -1,5 +1,6 @@
-package site.shitao.spring.base;
+package site.shitao.spring.base.lifecycle;
 
+import lombok.Builder;
 import lombok.Data;
 
 /**
@@ -7,6 +8,7 @@ import lombok.Data;
  * Created: 7/25
  */
 @Data
+@Builder
 public class TestBean {
     String name;
     String job;
