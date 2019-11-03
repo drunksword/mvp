@@ -20,8 +20,12 @@
     </bean>
 
 
-    <bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <property name="mapperInterface" value="site.shitao.mapper.UserMapper"></property>
-        <property name="sqlSessionFactory" ref="sqlsessionFactory"></property>
+    <!--<bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">-->
+        <!--<property name="mapperInterface" value="site.shitao.mapper.UserMapper"></property>-->
+        <!--<property name="sqlSessionFactory" ref="sqlsessionFactory"></property>-->
+    <!--</bean>-->
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="site.shitao.mapper"></property>
     </bean>
 </beans>
