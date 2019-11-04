@@ -5,7 +5,15 @@ import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
 import org.apache.ignite.Ignition;
 import org.apache.ignite.cache.CacheMode;
+import org.apache.ignite.cluster.ClusterNode;
 import org.apache.ignite.configuration.CacheConfiguration;
+import org.apache.ignite.configuration.IgniteConfiguration;
+import org.apache.ignite.lang.IgnitePredicate;
+import org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi;
+import org.apache.ignite.spi.discovery.tcp.ipfinder.zk.TcpDiscoveryZookeeperIpFinder;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Author: tao.shi
@@ -14,14 +22,27 @@ import org.apache.ignite.configuration.CacheConfiguration;
 public class HeapCache {
 
     public static void main(String... args){
-        Ignition.start();
+        IgniteConfiguration cfg = new IgniteConfiguration();
+        Map<String, Object> attr = new HashMap<>();
+        attr.put("name", "track");
+        cfg.setUserAttributes(attr);
+
+        TcpDiscoverySpi spi = new TcpDiscoverySpi();
+
+        TcpDiscoveryZookeeperIpFinder ipFinder = new TcpDiscoveryZookeeperIpFinder();
+        ipFinder.setZkConnectionString("192.168.60.12:2181");
+        spi.setIpFinder(ipFinder);
+        cfg.setDiscoverySpi(spi);
+
+        Ignition.start(cfg);
         Ignite ignite = Ignition.ignite();
 
-        CacheConfiguration cfg = new CacheConfiguration();
-        cfg.setName("cacheName");
-        cfg.setCacheMode(CacheMode.PARTITIONED);
+        CacheConfiguration cacheCfg = new CacheConfiguration();
+        cacheCfg.setName("trackObjCache");
+        cacheCfg.setCacheMode(CacheMode.PARTITIONED);
+        cacheCfg.setNodeFilter((IgnitePredicate<ClusterNode>) clusterNode -> "track".equals(clusterNode.attribute("name")));
 
-        IgniteCache<Long, User> cache = ignite.getOrCreateCache(cfg);
+        IgniteCache<Long, User> cache = ignite.getOrCreateCache(cacheCfg);
 
         cache.put(1l, new User(1l, "shitao"));
 
