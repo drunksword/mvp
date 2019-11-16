@@ -23,6 +23,7 @@
         <module>netty</module>
         <module>kafka</module>
         <module>ignite</module>
+        <module>concurrent</module>
     </modules>
 
     <properties>
