@@ -23,6 +23,7 @@
         <module>netty</module>
         <module>kafka</module>
         <module>ignite</module>
+        <module>java-base</module>
     </modules>
 
     <properties>
