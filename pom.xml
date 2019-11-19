@@ -23,6 +23,9 @@
         <module>netty</module>
         <module>kafka</module>
         <module>ignite</module>
+        <module>concurrent</module>
+        <module>reflect</module>
+        <module>singleton</module>
         <module>java-base</module>
     </modules>
 
